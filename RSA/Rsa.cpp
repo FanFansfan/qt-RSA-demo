@@ -70,8 +70,8 @@ void Rsa::genKey()
 
     emit pChanged(m_p);
     emit qChanged(m_q);
-    delete p_str;
-    delete q_str;
+    delete [] p_str;
+    delete [] q_str;
 }
 
 // base64编码的字节流按块加密，要求字节流已经经过padding。每一块import到mpz大整数类。加密后的大整数补前导0到密钥长度。
